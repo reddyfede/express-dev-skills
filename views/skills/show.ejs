@@ -7,18 +7,22 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
+    
     <h1><%= title %></h1>
+    
+    <h3>Skill in depth:</h3>
 
-    <p>Here is the list of skills:</p>
+    <h4> <%= skill.skill %></h4>
+    <p> <%= skill.rank %></p>
 
-    <% for( let i = 0; i < skills.length; i++ ) { %>
-        <li> <a href= '/skills/<%= skills[i].id %>' > <%= skills[i].skill%></a></li>
-    <% } %>
-
+    <div>
+        <a href="/skills"> ---> Skills Page <--- </a>
+    </div>
     <div>
         <a href="/"> ---> Home Page<--- </a>
     </div>
 
+
+
 </body>
 </html>
-
