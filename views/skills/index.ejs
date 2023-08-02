@@ -6,9 +6,16 @@
     <p>Here is the list of skills:</p>
 
     <% for( let i=0; i < skills.length; i++ ) { %>
-        <li> <a href='/skills/<%= skills[i].id %>'>
+        <li>
+            <form method="POST" action="/skills/<%= skills[i].id %>?_method=DELETE">
+                <button type="submit">x</button>
+            </form>
+
+
+            <a href='/skills/<%= skills[i].id %>'>
                 <%= skills[i].skill%>
-            </a></li>
+            </a>
+        </li>
         <% } %>
 
-<%- include("../partials/footer") %>
+            <%- include("../partials/footer") %>
