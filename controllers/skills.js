@@ -1,7 +1,8 @@
 module.exports = {
     index,
     getOne : show,
-    addNew
+    addNew,
+    createNew,
 }
 
 const Skills = require('../models/skills')
@@ -21,4 +22,9 @@ function show(req,res){
 
 function addNew(req,res){
     res.render('skills/new', {title: 'New Skill'})
+}
+
+function createNew(req,res){
+    Skills.addOne(req.body)
+    res.redirect('/skills')
 }

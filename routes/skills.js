@@ -9,5 +9,6 @@ router.get('/new', skillsCtrl.addNew)
 
 router.get('/:id', skillsCtrl.getOne);
 
+router.post('/', skillsCtrl.createNew)
 
 module.exports = router;
