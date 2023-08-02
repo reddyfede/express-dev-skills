@@ -1,6 +1,7 @@
 module.exports = {
     index,
-    getOne : show
+    getOne : show,
+    addNew
 }
 
 const Skills = require('../models/skills')
@@ -16,4 +17,8 @@ function show(req,res){
         skill : Skills.getOne(id)
     }
     res.render('skills/show', contextObject)
+}
+
+function addNew(req,res){
+    res.render('skills/new', {title: 'New Skill'})
 }

@@ -1,0 +1,21 @@
+<%- include("../partials/header") %>
+    <h1>
+        <%= title %>
+    </h1>
+
+    <p>Fill out the form to add a new skill.</p>
+
+    <form action="/skills" method="POST" autocomplete="off">
+        <div>
+            <label for="newskill">Name of the Skill</label>
+            <input id="newskill" type="text" name="skill">
+        </div>
+        <div>
+            <label for="rank"> Proficiency X/10 :</label>
+            <input id="rank" type="number" name="rank" min="1" max="10" placeholder="x/10">
+        </div>
+        <button type="submit">Add Skill</button>
+    </form>
+
+
+    <%- include("../partials/footer") %>
