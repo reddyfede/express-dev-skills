@@ -3,6 +3,7 @@ module.exports = {
     getOne : show,
     addNew,
     createNew,
+    remove,
 }
 
 const Skills = require('../models/skills')
@@ -26,5 +27,11 @@ function addNew(req,res){
 
 function createNew(req,res){
     Skills.addOne(req.body)
+    res.redirect('/skills')
+}
+
+function remove(req,res){
+    const id = Number(req.params.id)
+    Skills.deleteOne(id)
     res.redirect('/skills')
 }
