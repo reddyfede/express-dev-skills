@@ -1,28 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> <%= title %> </title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
-<body>
-    
-    <h1><%= title %></h1>
-    
-    <h3>Skill in depth:</h3>
+<%- include("../partials/header") %>
 
-    <h4> <%= skill.skill %></h4>
-    <p> <%= skill.rank %></p>
+    <h1>
+        <%= title %>
+    </h1>
 
-    <div>
-        <a href="/skills"> ---> Skills Page <--- </a>
-    </div>
-    <div>
-        <a href="/"> ---> Home Page<--- </a>
-    </div>
+    <hp>Skill in depth:</p>
 
+        <p>
+            <%= skill.skill %>
+        </p>
+        <p>
+            <%= skill.rank %>
+        </p>
 
-
-</body>
-</html>
+<%- include("../partials/footer") %>
