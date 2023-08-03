@@ -1,8 +1,8 @@
 const skills = [
-    { id: 1, skill: "skill 1", rank: 10 },
-    { id: 2, skill: "skill 2", rank: 7 },
-    { id: 3, skill: "skill 3", rank: 6 },
-    { id: 4, skill: "skill 4", rank: 9 },
+    { id: 1, skill: "First skill", rank: 10 },
+    { id: 2, skill: "Second skill", rank: 7 },
+    { id: 3, skill: "Third skill", rank: 6 },
+    { id: 4, skill: "Fourth skill", rank: 9 },
 ];
 
 module.exports = {

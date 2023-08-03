@@ -13,4 +13,6 @@ router.post('/', skillsCtrl.createNew)
 
 router.delete('/:id', skillsCtrl.remove);
 
+router.get('/edit/:id', skillsCtrl.edit)
+
 module.exports = router;

@@ -8,13 +8,19 @@
     <% for( let i=0; i < skills.length; i++ ) { %>
         <li>
             <form method="POST" action="/skills/<%= skills[i].id %>?_method=DELETE">
-                <button type="submit">x</button>
+                <button type="submit">X</button>
+            </form>
+
+            <form method="GET" action="/skills/edit/<%= skills[i].id %>">
+                <button type="submit">✎</button>
             </form>
 
 
-            <a href='/skills/<%= skills[i].id %>'>
-                <%= skills[i].skill%>
+            - <a href='/skills/<%= skills[i].id %>'>
+                <%= skills[i].skill %> 
+               
             </a>
+            - <%=skills[i].rank%>/10
         </li>
         <% } %>
 
