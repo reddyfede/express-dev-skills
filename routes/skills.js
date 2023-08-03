@@ -13,8 +13,8 @@ router.post('/', skillsCtrl.createNew);
 
 router.delete('/:id', skillsCtrl.remove);
 
-router.get('/edit/:id', skillsCtrl.edit);
+router.get('/:id/edit', skillsCtrl.edit);
 
-router.post('/edit/:id', skillsCtrl.modify);
+router.post('/:id/edit', skillsCtrl.modify);
 
 module.exports = router;

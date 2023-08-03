@@ -44,7 +44,7 @@ function edit(req,res){
         title : "Edit Skill",
         skill : Skills.getOne(id)
     }
-    res.render('skills/edit/edit', contextObject)
+    res.render('skills/edit', contextObject)
 }
 
 function modify(req,res){
