@@ -5,11 +5,20 @@
     </h1>
 
 
-        <h3>
-            <%= skill.skill %>
-        </h3>
-        <p>
-            Proficiency: <%= skill.rank %>/10
-        </p>
+    <h3>
+        <%= skill.skill %>
+    </h3>
+    <h4>
+        Description:
+    </h4>
+    <p>
+        <%= skill.desc %>
+    </p>
+    <h4>
+        Proficiency:
+    </h4>
+    <p>
+        <%= skill.rank %>/10
+    </p>
 
-<%- include("../partials/footer") %>
+    <%- include("../partials/footer") %>
