@@ -4,21 +4,34 @@
         <%= title %>
     </h1>
 
+    <div class="skillHeading">
+        <h3>
+            <%= skill.skill %> -
+        </h3>
 
-    <h3>
-        <%= skill.skill %>
-    </h3>
+        <form method="GET" action="/skills/<%= skill.id %>/edit">
+            <button class="actionBtn" type="submit">✏️</button>
+        </form>
+        <form method="POST" action="/skills/<%= skill.id %>?_method=DELETE">
+            <button class="actionBtn" type="submit">❌</button>
+        </form>
+
+    </div>
+
     <h4>
         Description:
     </h4>
     <p>
         <%= skill.desc %>
     </p>
+
     <h4>
         Proficiency:
     </h4>
     <p>
         <%= skill.rank %>/10
     </p>
+
+
 
     <%- include("../partials/footer") %>

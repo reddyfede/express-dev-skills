@@ -1,6 +1,6 @@
 module.exports = {
     index,
-    getOne : show,
+    getOne: show,
     addNew,
     createNew,
     remove,
@@ -10,47 +10,47 @@ module.exports = {
 
 const Skills = require('../models/skills')
 
-function index(req,res){
-    res.render('skills/index', {title: 'List of Skills', skills: Skills.getAll()})
+function index(req, res) {
+    res.render('skills/index', { title: 'List of Skills', skills: Skills.getAll() })
 }
 
-function show(req,res){
+function show(req, res) {
     const id = req.params.id
     const contextObject = {
-        title : "Skill Page",
-        skill : Skills.getOne(id)
+        title: "Skill Page",
+        skill: Skills.getOne(id)
     }
     res.render('skills/show', contextObject)
 }
 
-function addNew(req,res){
-    res.render('skills/new', {title: 'New Skill'})
+function addNew(req, res) {
+    res.render('skills/new', { title: 'New Skill' })
 }
 
-function createNew(req,res){
+function createNew(req, res) {
     Skills.addOne(req.body)
     res.redirect('/skills')
 }
 
-function remove(req,res){
+function remove(req, res) {
     const id = Number(req.params.id)
     Skills.deleteOne(id)
     res.redirect('/skills')
 }
 
-function edit(req,res){
+function edit(req, res) {
     const id = req.params.id
     const contextObject = {
-        title : "Edit Skill",
-        skill : Skills.getOne(id)
+        title: "Edit Skill",
+        skill: Skills.getOne(id)
     }
     res.render('skills/edit', contextObject)
 }
 
-function modify(req,res){
+function modify(req, res) {
     const id = Number(req.params.id)
-    const data = {...req.body}
+    const data = { ...req.body }
     console.log(data)
-    Skills.editOne(id,data)
-    res.redirect('/skills')
+    Skills.editOne(id, data)
+    res.redirect(`/skills/${id}`)
 }

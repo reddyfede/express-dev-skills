@@ -3,16 +3,19 @@
     <h1>
         <%= title %>
     </h1>
-   
-    <h3><%= skill.skill %></h3>
+
+    <h3>
+        <%= skill.skill %>
+    </h3>
 
     <form action="/skills/<%= skill.id %>?_method=PUT" method="POST" autocomplete="off">
 
-        <p>Skill Description: </p>
-        <textarea id="skillDesc" type="text" name="desc" cols="50" rows="6" style="width:300px; height:50px;"><%= skill.desc %></textarea>
+        <h4>Skill Description: </h4>
+        <textarea id="skillDesc" type="text" name="desc" cols="50" rows="6"
+            style="width:300px; height:50px;"><%= skill.desc %></textarea>
 
 
-        <p> Proficiency X/10: </p>
+        <h4> Proficiency X/10: </h4>
         <input type="number" name="rank" min="1" max="10" value="<%= skill.rank %>" required>
 
         <button type="submit" style="margin-top: 20px; display: block;">Edit Skill</button>
