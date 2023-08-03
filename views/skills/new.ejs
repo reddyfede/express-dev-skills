@@ -6,15 +6,21 @@
     <h3>Fill out the form to add a new skill.</h3>
 
     <form action="/skills" method="POST" autocomplete="off">
-        <div>
-            <label for="newskill">Name of the Skill: </label>
-            <input id="newskill" type="text" name="skill" required>
-        </div>
-        <div>
-            <label for="rank"> Proficiency X/10: </label>
-            <input id="rank" type="number" name="rank" min="1" max="10" required>
-        </div>
-        <button type="submit">Add Skill</button>
+
+        <p> Skill Name: </p>
+        <input type="text" name="skill" placeholder="Name" size=28 required>
+
+
+        <p>Skill Description: </p>
+        <textarea id="skillDesc" type="text" name="desc" cols="50" rows="6" style="width:300px; height:50px;"
+            placeholder="Description"></textarea>
+
+
+        <p> Proficiency X/10: </p>
+        <input id="rank" type="number" name="rank" min="1" max="10" placeholder="0" required>
+
+        <button type="submit" style="margin-top: 20px; display: block;">Add Skill</button>
+
     </form>
 
     <%- include("../partials/footer") %>

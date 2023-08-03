@@ -39,4 +39,5 @@ function editOne(id,skill) {
     })
     console.log(skillPos, skill)
     skills[skillPos].rank = skill.rank
+    skills[skillPos].desc = skill.desc
 }
