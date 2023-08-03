@@ -10,6 +10,7 @@ module.exports = {
     getOne,
     addOne,
     deleteOne,
+    editOne,
 };
 
 function getAll() {
@@ -30,4 +31,12 @@ function deleteOne(id) {
         return skill.id === id
     })
     skills.splice(skillPos, 1)
+}
+
+function editOne(id,skill) {
+    const skillPos = skills.findIndex(function (s) {
+        return s.id === id
+    })
+    console.log(skillPos, skill)
+    skills[skillPos].rank = skill.rank
 }

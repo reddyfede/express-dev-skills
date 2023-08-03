@@ -5,6 +5,7 @@ module.exports = {
     createNew,
     remove,
     edit,
+    modify,
 }
 
 const Skills = require('../models/skills')
@@ -44,4 +45,12 @@ function edit(req,res){
         skill : Skills.getOne(id)
     }
     res.render('skills/edit/edit', contextObject)
+}
+
+function modify(req,res){
+    const id = Number(req.params.id)
+    const data = {...req.body}
+    console.log(data)
+    Skills.editOne(id,data)
+    res.redirect('/skills')
 }

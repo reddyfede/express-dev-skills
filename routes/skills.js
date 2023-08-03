@@ -9,10 +9,12 @@ router.get('/new', skillsCtrl.addNew)
 
 router.get('/:id', skillsCtrl.getOne);
 
-router.post('/', skillsCtrl.createNew)
+router.post('/', skillsCtrl.createNew);
 
 router.delete('/:id', skillsCtrl.remove);
 
-router.get('/edit/:id', skillsCtrl.edit)
+router.get('/edit/:id', skillsCtrl.edit);
+
+router.post('/edit/:id', skillsCtrl.modify);
 
 module.exports = router;
