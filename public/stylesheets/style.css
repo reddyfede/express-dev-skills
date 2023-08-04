@@ -9,8 +9,6 @@ body {
   align-items: center;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: whitesmoke;
-  overflow: hidden;
-
 }
 
 nav, footer {
@@ -53,14 +51,6 @@ h1 {
 
 li {
   margin: 6px 0 0 0;
-}
-
-.actionBtn {
-  display: flex;
-  width: 2em;
-  height: 2em;
-  align-content: center;
-  justify-content: center;
 }
 
 .confirmBtn {
