@@ -11,14 +11,12 @@
     <form action="/skills/<%= skill.id %>?_method=PUT" method="POST" autocomplete="off">
 
         <h4>Description: </h4>
-        <textarea id="skillDesc" type="text" name="desc" cols="50" rows="6"
-            style="width:300px; height:50px;"><%= skill.desc %></textarea>
-
+        <textarea id="skillDesc" type="text" name="desc" rows="5" ><%= skill.desc %></textarea>
 
         <h4> Proficiency X/10: </h4>
         <input type="number" name="rank" min="1" max="10" value="<%= skill.rank %>" required>
 
-        <button type="submit" style="margin-top: 20px; display: block;">Save</button>
+        <button class="confirmBtn" type="submit" >Save</button>
 
     </form>
 

@@ -1,39 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  height: 80vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 50px;
+  align-items: center;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: rgb(198, 232, 244);
+  background-color: whitesmoke;
+  overflow: hidden;
+
+}
+
+nav, footer {
+  background-color: #D4A5A5;
+  border: 1px solid black;
+  height: calc(15px + 4vh);
+  width: calc(200px + 30vw);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+nav{
+  margin-top: 3vh;
+}
+
+main {
+  background-color: #FFECDA;
+  border: 1px solid black;
+  padding: 0 3vw 0 3vw;
+  width: calc(200px + 30vw);
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+h1 {
+  align-self: center;
 }
 
 #skillDesc {
   font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+  width: 100%;
+}
+
+#skillName {
+  width: 50%;
 }
 
 li {
-  margin: 5px 0 0 0;
+  margin: 6px 0 0 0;
 }
 
 .actionBtn {
-  display:flex;
+  display: flex;
   width: 2em;
   height: 2em;
   align-content: center;
   justify-content: center;
 }
 
+.confirmBtn {
+  margin-top: 20px;
+  display: block;
+}
+
 a {
-  color: blue;
+  color: black;
 }
 
 .skillHeading {
   display: flex;
   flex-direction: row;
-  gap:5px;
+  gap: 5px;
   align-items: center;
-}
-
-footer{
-  margin-top: auto;
 }
